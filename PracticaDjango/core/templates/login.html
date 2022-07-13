@@ -1,0 +1,11 @@
+{% extends 'home.html' %}
+{% block content %}
+<form class="form" id="mi-formulario" method="post">
+    {% csrf_token %}
+    <fieldset class="border p-2">
+        <legend onmouseover="style.color = '#355887'" onmouseout="style.color= 'black'" class="float-none w-auto p-2">Registro :</legend>
+    {{ form.as_p}}
+    <button type="submit" class="btn btn-primary">OK!</button> 
+    </fieldset>    
+</form>  
+{% endblock %}
